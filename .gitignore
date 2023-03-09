@@ -1,0 +1,7 @@
+
+*.zip
+.ipynb_checkpoints/
+openlogic-openjdk-11.0.18+10-windows-x64/
+spark-3.3.2-bin-hadoop3/
+openlogic-openjdk-11.0.18*
+Data Processing .ipynb

@@ -334,11 +334,7 @@ len(df.columns)
 ```
 
 
-
-
     7
-
-
 
 ## Identifying Data types columns
 
@@ -796,16 +792,11 @@ data_with_outliers.show()
     only showing top 20 rows
 
 
-​    
-
-
 ```python
 # Selecting the numerical columns from the original dataframe and converting into pandas
 
 numeric_columns
 ```
-
-
 
 
     ['Number_of_houses', 'Avg_size_household', 'Avg_Salary', 'label']
@@ -918,24 +909,6 @@ dataset_after_removing_outliers.head(10)
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 
 <table border="1" class="dataframe">
   <thead>
@@ -1136,8 +1109,6 @@ original_numerical_df
 </table>
 <p>2000 rows × 4 columns</p>
 
-</div>
-
 
 
 
@@ -1303,16 +1274,6 @@ inputCols=["idx_{0}".format(x) for x in label_col]
 
 
 ```python
-#inputCols=["idx_{0}".format(x) for x in df.columns if x == label_col]
-```
-
-
-```python
-
-```
-
-
-```python
 inputCols
 ```
 
@@ -1390,24 +1351,6 @@ pandasDF.head()
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 
 <table border="1" class="dataframe">
   <thead>
@@ -1500,19 +1443,7 @@ pandasDF.head()
   </tbody>
 </table>
 
-</div>
 
-
-
-
-```python
-
-```
-
-
-```python
-#dfb=new_df.select(*inputCols)
-```
 
 
 ```python
@@ -1568,24 +1499,6 @@ pandasDFb.head()
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 
 <table border="1" class="dataframe">
   <thead>
@@ -1694,24 +1607,6 @@ pandasDFb[pandasDFb["total_outliers"] > 0]
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-
-</style>
 
 <table border="1" class="dataframe">
   <thead>
@@ -2215,11 +2110,6 @@ dataframe.select(*res.columns,'idx_Avg_age_outlier').where(dataframe.idx_Avg_age
     only showing top 20 rows
 
 
-​    
-
-
-
-
 ```python
 pandasDFc = res.toPandas()
 pandasDFc.head()
@@ -2286,10 +2176,6 @@ pandasDFc.head()
   </tbody>
 </table>
 
-</div>
-
-
-
 
 ```python
 dfd=pandasDFc
@@ -2300,8 +2186,6 @@ dfd=pandasDFc
 dfd[(dfd.idx_Customer_subtype_outlier == 'yes') | (dfd.idx_Avg_age_outlier == 'yes') | (dfd.idx_Customer_main_type_outlier == 'yes')]
 
 ```
-
-
 
 <table border="1" class="dataframe">
   <thead>
@@ -2419,7 +2303,8 @@ dfd[(dfd.idx_Customer_subtype_outlier == 'yes') | (dfd.idx_Avg_age_outlier == 'y
 </table>
 <p>103 rows × 6 columns</p>
 
+If you are interested to the removal outliers part you can see the whole notebook [here](https://github.com/ruslanmv/How-to-do-Data-Analysis-with-Pyspark/blob/master/Data_Analysis_Pyspark.ipynb), in the optional part.
 
 
 
-
+**Congratulations!** We have identified the outliers in **Pyspark**.
